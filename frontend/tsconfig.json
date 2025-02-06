@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,                // Habilitar la interoperabilidad                         // Opcional, habilita comprobaciones estrictas
+    "skipLibCheck": true,                    // Opcional, para evitar problemas con los tipos de bibliotecas
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}
