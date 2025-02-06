@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LoginModal from "./LoginModal"; // Asegúrate de importar correctamente el modal
+
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
       </header>
 
       {/* Login Modal */}
-      {isLoginModalOpen && <LoginModal onClose={handleLoginClose}  onLogin={(userName) => setUserName(userName)} />}
+     
     </>
   );
 };
