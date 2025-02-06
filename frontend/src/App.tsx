@@ -25,7 +25,7 @@ const App: React.FC = () => {
             <Route path="/manage-tasks" element={<TaskList/>} />
             <Route path="/userTasks/:userId" element={<UserTasks/>} />
             <Route path="/add" element={<TaskForm/>} />
-            <Route path="/update/:id" element={<TaskForm/>} />
+            <Route path="/update/:id" element={<UpdateTaskForm/>} />
 
           </Routes>
         </div>
