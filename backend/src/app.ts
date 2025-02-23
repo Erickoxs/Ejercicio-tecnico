@@ -2,6 +2,8 @@ import express, { Application } from "express";
 const cors = require('cors');
 import taskRoutes from "./routes/taskRoutes"
 import userRoutes from "./routes/userRoutes"
+import dotenv from "dotenv";
+dotenv.config();
 
 const app: Application = express();
 
@@ -10,11 +12,10 @@ app.use(express.json());
 
 // Configuración personalizada de CORS
 const corsOptions = {
-  origin: 'http://localhost:3000', // Asegúrate de que tu frontend esté corriendo en este puerto
+  origin: process.env.FRONTEND_URL, // Asegúrate de que tu frontend esté corriendo en este puerto
   methods: 'GET,POST,PUT,DELETE', // Métodos permitidos
   allowedHeaders: 'Content-Type,Authorization', // Headers permitidos
 };
-
 // Aplica CORS con las opciones configuradas
 app.use(cors(corsOptions));
 

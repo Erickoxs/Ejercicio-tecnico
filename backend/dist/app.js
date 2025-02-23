@@ -7,12 +7,14 @@ const express_1 = __importDefault(require("express"));
 const cors = require('cors');
 const taskRoutes_1 = __importDefault(require("./routes/taskRoutes"));
 const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 const app = (0, express_1.default)();
 // Middleware para procesar los cuerpos de solicitudes en JSON
 app.use(express_1.default.json());
 // Configuración personalizada de CORS
 const corsOptions = {
-    origin: 'http://localhost:3000', // Asegúrate de que tu frontend esté corriendo en este puerto
+    origin: process.env.FRONTEND_URL, // Asegúrate de que tu frontend esté corriendo en este puerto
     methods: 'GET,POST,PUT,DELETE', // Métodos permitidos
     allowedHeaders: 'Content-Type,Authorization', // Headers permitidos
 };

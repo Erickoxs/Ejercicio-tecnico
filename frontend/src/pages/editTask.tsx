@@ -43,10 +43,7 @@ const UpdateTaskForm: React.FC = () => {
     e.preventDefault();
 
     // Validar los campos
-    if (!title || !description || !dueDate) {
-      setError("Por favor, completa todos los campos.");
-      return;
-    }
+   
 
     try {
       // Crear el objeto con los datos actualizados
